@@ -13,9 +13,13 @@ const Form = () => {
   };
 
   const submitHandler = useCallback(() => {
-    QRCode.toDataURL(input, (error, url) => {
-      !error && dispatch({ type: "setURL", url });
-    });
+    QRCode.toDataURL(
+      input,
+      { width: 350, errorCorrectionLevel: "H", version: 2 },
+      (error, url) => {
+        !error && dispatch({ type: "setURL", url });
+      }
+    );
   }, [input, dispatch]);
 
   return (

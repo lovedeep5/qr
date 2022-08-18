@@ -5,7 +5,7 @@
   position: absolute;
   width: 100vw;
   height: 100vh;
-  background-color: $color-tertiary;
+  background-color: $color-primary;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -16,19 +16,19 @@
     align-items: center;
     flex-direction: row;
     gap: 5px;
-    border: 1px solid $color-secondary;
+    border: 1px solid $color-primary;
     padding: 2px;
     border-radius: 2em;
     overflow: hidden;
     align-self: center;
-    flex-basis: 60%;
+    flex-basis: 100%;
     background-color: white;
 
     > div:first-of-type {
-      flex-basis: 70%;
+      flex-basis: 50%;
     }
     > div:last-of-type {
-      flex-basis: 30%;
+      flex-basis: 50%;
     }
   }
 
@@ -54,9 +54,28 @@
     border-radius: 2em;
     border: none;
     font-family: $font-family-primary;
-    font-size: 1em;
+    font-size: 0.8em;
+    letter-spacing: 0.05em;
     font-weight: 400;
     background-color: $color-secondary;
     color: white;
+  }
+}
+
+@media (min-width: 992px) {
+  .form-wrapper {
+    .flex {
+      flex-basis: 60%;
+
+      > div:first-of-type {
+        flex-basis: 70%;
+      }
+      > div:last-of-type {
+        flex-basis: 30%;
+      }
+    }
+    button {
+      font-size: 1em;
+    }
   }
 }

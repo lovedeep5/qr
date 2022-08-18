@@ -21,12 +21,12 @@ const Popup = ({ show }) => {
           <img src={url} alt="QR" />
         </div>
         <div className="button-container">
-          <a class="btns" href={url} download="qr">
+          <a className="btns" href={url} download="qr">
             Download
           </a>
           <a
             href="/"
-            class="btns"
+            className="btns"
             onClick={(e) => {
               e.preventDefault();
               dispatch(popupCloseAction);
