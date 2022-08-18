@@ -1,0 +1,62 @@
+@import "/src/styles/global.scss";
+
+.form-wrapper {
+  padding: 20px;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: $color-tertiary;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 5px;
+    border: 1px solid $color-secondary;
+    padding: 2px;
+    border-radius: 2em;
+    overflow: hidden;
+    align-self: center;
+    flex-basis: 60%;
+    background-color: white;
+
+    > div:first-of-type {
+      flex-basis: 70%;
+    }
+    > div:last-of-type {
+      flex-basis: 30%;
+    }
+  }
+
+  input {
+    padding: 5px 5px 5px 10px;
+    min-height: 46px;
+    width: 100%;
+    border: none;
+    font-family: $font-family-primary;
+    font-size: 1em;
+    background-color: transparent;
+
+    &:focus-visible {
+      border: none;
+      outline-width: 0px;
+      outline-style: none;
+    }
+  }
+  button {
+    padding: 0px 20px;
+    min-height: 46px;
+    width: 100%;
+    border-radius: 2em;
+    border: none;
+    font-family: $font-family-primary;
+    font-size: 1em;
+    font-weight: 400;
+    background-color: $color-secondary;
+    color: white;
+  }
+}

@@ -1,0 +1,53 @@
+@import "/src/styles/global.scss";
+
+.popup-wrapper {
+  position: absolute;
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .popup-body {
+    background-color: white;
+    max-width: 600px;
+    width: auto;
+    box-shadow: 5px 0px 25px -5px black;
+    padding: 20px;
+    font-family: $font-family-primary;
+
+    p {
+      display: block;
+      text-align: center;
+    }
+    .image-container {
+      display: block;
+      text-align: center;
+    }
+    .button-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+
+      .btns {
+        min-width: 100px;
+        background-color: $color-primary;
+        border: none;
+        color: white;
+        padding: 0px 15px;
+        min-height: 46px;
+        font-family: $font-family-primary;
+        font-size: 0.8em;
+        letter-spacing: 0.05em;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+  }
+}
