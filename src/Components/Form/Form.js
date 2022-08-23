@@ -20,6 +20,7 @@ const Form = () => {
         !error && dispatch({ type: "setURL", url });
       }
     );
+    Navigator.vibrate();
   }, [input, dispatch]);
 
   return (
