@@ -15,12 +15,12 @@ const Form = () => {
   const submitHandler = useCallback(() => {
     QRCode.toDataURL(
       input,
-      { width: 350, errorCorrectionLevel: "H", version: 2 },
+      { width: 350, errorCorrectionLevel: "H", version: 10 },
       (error, url) => {
+        console.log('error', error);
         !error && dispatch({ type: "setURL", url });
       }
     );
-    Navigator.vibrate();
   }, [input, dispatch]);
 
   return (
